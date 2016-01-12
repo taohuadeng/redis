@@ -10,7 +10,7 @@ import redis.clients.jedis.Jedis;
 /**
  * 发布订阅测试类
  */
-public class PubsubTest {
+public class PubscribeTest {
     @Test
     public void testPub() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("spring-context.xml");
