@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <!-- 启动服务器读取的配置文件 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:*.xml</param-value>
+    </context-param>
+
+    <!-- 注册Spring的request作用域 -->
+    <!--
+        request request表示该针对每一次HTTP请求都会产生一个新的bean，同时该bean仅在当前HTTP
+        request内有效，配置实例： request、session、global
+        session使用的时候首先要在初始化web的web.xml中做如下配置： 如果你使用的是Servlet
+        2.4及以上的web容器，那么你仅需要在web应用的XML声明文件web.xml中增加下述ContextListener即可：
+    -->
+    <listener>
+        <listener-class>
+            org.springframework.web.context.request.RequestContextListener
+        </listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+
+</web-app>
