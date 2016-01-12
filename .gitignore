@@ -1,0 +1,12 @@
+**/.idea/*
+**/.svn/**
+**/target/**
+**/*.iml
+
+**/.settings/*
+**/.classpath/*
+**/.project/*
+.project
+**/log/**
+
+node_modules
