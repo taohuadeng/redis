@@ -32,4 +32,11 @@
     <bean id="redisUtil" class="com.redis.thd.RedisUtil">
         <property name="jedisPool" ref="jedisPool"/>
     </bean>
+
+    <!-- 普通redis -->
+    <bean id="jedis" class="com.redis.thd.jedispool.RedisFactoryBean">
+        <constructor-arg index="0" ref="jedisPoolConfig"/>
+        <constructor-arg index="1" value="192.168.1.217"/>
+        <constructor-arg index="2" value="6379"/>
+    </bean>
 </beans>

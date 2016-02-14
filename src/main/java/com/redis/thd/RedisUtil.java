@@ -29,6 +29,7 @@ public class RedisUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return jedis;
     }
 
